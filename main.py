@@ -1,14 +1,46 @@
-def pares():
-    pass
+import os
+import random
+import time
 
+
+def pares():
+    i = 1
+    while i <= 6:
+        numero_random = random.randint(1,56)
+        no_repeat = numero_random
+        if numero_random % 2 == 0:
+            if numero_random == no_repeat:
+                pass
+            print(f"Numero {i} --> {numero_random}")
+        else:
+            continue
+        i += 1
 
 def impares():
-    pass
+    i = 1
+    while i <= 6:
+        numero_random = random.randint(1,56)
+        no_repeat = numero_random
+        if numero_random % 2 == 1:
+            if numero_random == no_repeat:
+                pass
+            print(f"Numero {i} --> {numero_random}")
+        else:
+            continue
+        i += 1
 
 
 def mixtos():
-    pass
-
+    i = 1
+    while i <= 6:
+        numero_random = random.randint(1,56)
+        print(f"Numero {i} --> {numero_random}")
+        no_repeat = numero_random
+        if no_repeat != numero_random:
+            continue
+        else:
+            pass
+        i += 1
 
 def menu():
     while True:
