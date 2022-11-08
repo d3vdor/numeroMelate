@@ -9,41 +9,34 @@ def back_menu():
     menu()
 
 
+def par_impar(n,c):
+    i = 1
+    while i <= 6:
+        numero_random = random.randint(1,56)
+        if numero_random % 2 == c:
+            no_repeat = numero_random
+            if numero_random == no_repeat:
+                pass
+            print(f"{i}. Numero {n} --> {numero_random}")
+        else:
+            continue
+        i += 1
+    back_menu()
+
+
 def no_repetir(a):
     b = random.randint(1,56)
     if a != b:
         return a
     else:
         pass
-    
+
 
 def pares():
-    i = 1
-    while i <= 6:
-        numero_random = random.randint(1,56)
-        no_repeat = numero_random
-        if numero_random % 2 == 0:
-            if numero_random == no_repeat:
-                pass
-            print(f"Numero {i} --> {numero_random}")
-        else:
-            continue
-        i += 1
-    back_menu()
+    par_impar("par",0)
 
 def impares():
-    i = 1
-    while i <= 6:
-        numero_random = random.randint(1,56)
-        no_repeat = numero_random
-        if numero_random % 2 == 1:
-            if numero_random == no_repeat:
-                pass
-            print(f"Numero {i} --> {numero_random}")
-        else:
-            continue
-        i += 1
-    back_menu()
+    par_impar("impar",1)
 
 
 def mixtos():
@@ -73,7 +66,8 @@ def menu():
         elif opc == 3:
             mixtos()
         elif opc == 4:
-            break
+            if 4 == 4:
+                break
         else:
             print("Digite una opcion correcta")
 
