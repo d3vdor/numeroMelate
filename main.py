@@ -9,44 +9,25 @@ def back_menu():
     menu()
 
 
-def par_impar(n,c):
-    i = 1
-    while i <= 6:
-        numero_random = random.randint(1,56)
-        if numero_random % 2 == c:
-            no_repeat = numero_random
-            if numero_random == no_repeat:
-                pass
-            print(f"{i}. Numero {n} --> {numero_random}")
-        else:
+def no_repetir(a,m):
+    aleatorios = random.sample(range(1,56),6)
+    for i in aleatorios:
+        if i % 2 == a:
             continue
-        i += 1
+    print(f"Numeros {m}: {aleatorios}")
     back_menu()
 
-
-def no_repetir(a):
-    b = random.randint(1,56)
-    if a != b:
-        return a
-    else:
-        pass
-
-
 def pares():
-    par_impar("par",0)
+    no_repetir(0,"Pares")
+        
 
 def impares():
-    par_impar("impar",1)
+    no_repetir(1,"Impares")
 
 
 def mixtos():
-    i = 1
-    while i <= 6:
-        numero_random = random.randint(1,56)
-        print(f"Numero {i} --> {numero_random}")
-        no_repetir(numero_random)
-        i += 1
-    back_menu()
+    aleatorios = random.sample(range(1,56),6)
+    print(f"Numeros Mixtos: {aleatorios}")
 
 
 def menu():
