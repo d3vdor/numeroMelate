@@ -3,6 +3,20 @@ import random
 import time
 
 
+def back_menu():
+    time.sleep(10)
+    os.system("cls")
+    menu()
+
+
+def no_repetir(a):
+    b = random.randint(1,56)
+    if a != b:
+        return a
+    else:
+        pass
+    
+
 def pares():
     i = 1
     while i <= 6:
@@ -15,6 +29,7 @@ def pares():
         else:
             continue
         i += 1
+    back_menu()
 
 def impares():
     i = 1
@@ -28,6 +43,7 @@ def impares():
         else:
             continue
         i += 1
+    back_menu()
 
 
 def mixtos():
@@ -35,12 +51,10 @@ def mixtos():
     while i <= 6:
         numero_random = random.randint(1,56)
         print(f"Numero {i} --> {numero_random}")
-        no_repeat = numero_random
-        if no_repeat != numero_random:
-            continue
-        else:
-            pass
+        no_repetir(numero_random)
         i += 1
+    back_menu()
+
 
 def menu():
     while True:
